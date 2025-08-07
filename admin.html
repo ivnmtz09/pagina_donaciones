@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Administración - Donaciones Escolares</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-page">
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html"><img src="img/escudo.png" alt="Escudo Eusebio" class="nav-logo-img"></a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Página Principal</a></li>
+        <li><a href="#admin" class="nav-link"><i class="fas fa-cog"></i> Administración</a></li>
+        <li><a href="#estadisticas" class="nav-link"><i class="fas fa-chart-line"></i> Estadísticas</a></li>
+      </ul>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header">
+    <div class="header-content">
+      <h1 class="main-title"><i class="fas fa-tools"></i> Panel de Administración</h1>
+      <h2 class="subtitle">Controla las donaciones de útiles escolares</h2>
+      <div class="admin-nav">
+        <a href="index.html" class="nav-btn">
+          <i class="fas fa-eye"></i> Ver Página Principal
+        </a>
+        <button onclick="resetAllCounters()" class="nav-btn reset-btn">
+          <i class="fas fa-redo"></i> Resetear Todo
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="admin-section" id="admin">
+      <h3 class="section-title"><i class="fas fa-pencil-alt"></i> Lista de Útiles</h3>
+      <div class="info-card fade-in">
+        <ul id="admin-donations-list" class="donations-list">
+        </ul>
+      </div>
+      <div class="total-counter fade-in" data-delay="200">
+        <h3><i class="fas fa-box"></i> Total de Útiles Donados</h3>
+        <div id="total-count" class="total-number">0</div>
+        <p>Esta suma se refleja también en la página pública</p>
+      </div>
+    </section>
+
+    <section class="stats-section" id="estadisticas">
+      <h3 class="section-title"><i class="fas fa-chart-bar"></i> Estadísticas Generales</h3>
+      <div class="stats-container fade-in">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-list stat-icon"></i>
+            <div id="stat-items" class="stat-number">0</div>
+            <p class="stat-label">Tipos de útiles</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-box-open stat-icon"></i>
+            <div id="stat-total" class="stat-number">0</div>
+            <p class="stat-label">Total donado</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-percentage stat-icon"></i>
+            <div id="stat-progress" class="stat-number">0%</div>
+            <p class="stat-label">Progreso</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-child stat-icon"></i>
+            <div id="stat-beneficiaries" class="stat-number">0</div>
+            <p class="stat-label">Niños beneficiados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">
+      <i class="fas fa-school"></i> I.E. Eusebio Séptimo Mari - Administración 2025
+      <i class="fas fa-star"></i>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

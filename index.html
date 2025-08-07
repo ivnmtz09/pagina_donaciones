@@ -3,358 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donaciones Escolares</title>
+    <title>Donaciones Escolares - I.E. Eusebio Séptimo Mari</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+     Navigation Menu 
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/escudo.png" alt="Escudo I.E. Eusebio Séptimo Mari" class="nav-logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#mision" class="nav-link"><i class="fas fa-heart"></i> Misión</a></li>
+                <li><a href="#donaciones" class="nav-link"><i class="fas fa-gift"></i> Donaciones</a></li>
+                <li><a href="#colegios" class="nav-link"><i class="fas fa-school"></i> Colegios</a></li>
+                <li><a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header" id="inicio">
         <div class="header-content">
-            <h1 class="main-title">🎒 Donaciones Escolares 🎒</h1>
+            <div class="header-logo-container">
+                <img src="img/escudo.png" alt="Escudo I.E. Eusebio Séptimo Mari" class="header-logo">
+            </div>
+            <h1 class="main-title">
+                <i class="fas fa-graduation-cap"></i>
+                Donaciones Escolares
+                <i class="fas fa-graduation-cap"></i>
+            </h1>
             <h2 class="subtitle">Ayudando a niños de escasos recursos</h2>
             <div class="decorative-stars">
-                <span class="star">⭐</span>
-                <span class="star">⭐</span>
-                <span class="star">⭐</span>
-                <span class="star">⭐</span>
-                <span class="star">⭐</span>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
             </div>
         </div>
     </header>
 
     <main class="main-content">
-        <section class="schools-section">
-            <h3 class="section-title"> Colegios Beneficiados </h3>
+        <section class="schools-section" id="colegios">
+            <h3 class="section-title">
+                <i class="fas fa-school"></i>
+                Colegios Beneficiados
+            </h3>
             <div class="schools-container">
                 <div class="school-card fade-in">
-                    <div class="school-icon">🏫</div>
-                    <h4>I.E. Eusebio Séptimio Maria</h4>
+                    <div class="school-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>I.E. Eusebio Séptimo Mari</h4>
+                    <p>Sede Principal</p>
                 </div>
                 <div class="school-card fade-in">
-                    <div class="school-icon">🏫</div>
+                    <div class="school-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
                     <h4>Sede: Madre Verónica</h4>
+                    <p>Sede Primaria</p>
                 </div>
             </div>
         </section>
 
-        <section class="donations-section">
-            <h3 class="section-title">📚 Útiles Donados 📚</h3>
-            <div class="items-grid">
-    <div class="item-card fade-in" data-delay="0">
-        <div class="item-icon">🖊️</div>
-        <h4>Lapiceros</h4>
-        <div class="quantity" id="count-lapiceros">25 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('lapiceros', -1)">-</button>
-            <input type="number" id="input-lapiceros" min="0" value="25" onchange="setCounter('lapiceros', this.value)">
-            <button class="counter-btn" onclick="updateCounter('lapiceros', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 85%"></div>
-        </div>
-    </div>
-    
-    <div class="item-card fade-in" data-delay="200">
-        <div class="item-icon">✏️</div>
-        <h4>Lápices</h4>
-        <div class="quantity" id="count-lapices">40 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('lapices', -1)">-</button>
-            <input type="number" id="input-lapices" min="0" value="40" onchange="setCounter('lapices', this.value)">
-            <button class="counter-btn" onclick="updateCounter('lapices', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 95%"></div>
-        </div>
-    </div>
-    
-    <div class="item-card fade-in" data-delay="400">
-        <div class="item-icon">📓</div>
-        <h4>Cuadernos</h4>
-        <div class="quantity" id="count-cuadernos">18 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('cuadernos', -1)">-</button>
-            <input type="number" id="input-cuadernos" min="0" value="18" onchange="setCounter('cuadernos', this.value)">
-            <button class="counter-btn" onclick="updateCounter('cuadernos', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 70%"></div>
-        </div>
-    </div>
-    
-    <div class="item-card fade-in" data-delay="600">
-        <div class="item-icon">📏</div>
-        <h4>Reglas</h4>
-        <div class="quantity" id="count-reglas">12 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('reglas', -1)">-</button>
-            <input type="number" id="input-reglas" min="0" value="12" onchange="setCounter('reglas', this.value)">
-            <button class="counter-btn" onclick="updateCounter('reglas', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 60%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="800">
-        <div class="item-icon">📐</div>
-        <h4>Escuadras</h4>
-        <div class="quantity" id="count-escuadras">8 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('escuadras', -1)">-</button>
-            <input type="number" id="input-escuadras" min="0" value="8" onchange="setCounter('escuadras', this.value)">
-            <button class="counter-btn" onclick="updateCounter('escuadras', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 40%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="1000">
-        <div class="item-icon">✂️</div>
-        <h4>Tijeras</h4>
-        <div class="quantity" id="count-tijeras">15 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('tijeras', -1)">-</button>
-            <input type="number" id="input-tijeras" min="0" value="15" onchange="setCounter('tijeras', this.value)">
-            <button class="counter-btn" onclick="updateCounter('tijeras', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="1200">
-        <div class="item-icon">🖍️</div>
-        <h4>Colores</h4>
-        <div class="quantity" id="count-colores">22 cajas</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('colores', -1)">-</button>
-            <input type="number" id="input-colores" min="0" value="22" onchange="setCounter('colores', this.value)">
-            <button class="counter-btn" onclick="updateCounter('colores', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 88%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="1400">
-        <div class="item-icon">🧮</div>
-        <h4>Calculadoras</h4>
-        <div class="quantity" id="count-calculadoras">6 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('calculadoras', -1)">-</button>
-            <input type="number" id="input-calculadoras" min="0" value="6" onchange="setCounter('calculadoras', this.value)">
-            <button class="counter-btn" onclick="updateCounter('calculadoras', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 30%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="1600">
-        <div class="item-icon">📎</div>
-        <h4>Clips</h4>
-        <div class="quantity" id="count-clips">50 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('clips', -1)">-</button>
-            <input type="number" id="input-clips" min="0" value="50" onchange="setCounter('clips', this.value)">
-            <button class="counter-btn" onclick="updateCounter('clips', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 100%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="1800">
-        <div class="item-icon">🗂️</div>
-        <h4>Carpetas</h4>
-        <div class="quantity" id="count-carpetas">14 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('carpetas', -1)">-</button>
-            <input type="number" id="input-carpetas" min="0" value="14" onchange="setCounter('carpetas', this.value)">
-            <button class="counter-btn" onclick="updateCounter('carpetas', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 70%"></div>
-        </div>
-    </div>
-
-    <!-- Útiles escolares adicionales -->
-    <div class="item-card fade-in" data-delay="2000">
-        <div class="item-icon">🧷</div>
-        <h4>Grapas</h4>
-        <div class="quantity" id="count-grapas">20 cajas</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('grapas', -1)">-</button>
-            <input type="number" id="input-grapas" min="0" value="20" onchange="setCounter('grapas', this.value)">
-            <button class="counter-btn" onclick="updateCounter('grapas', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 80%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="2200">
-        <div class="item-icon">🧽</div>
-        <h4>Borradores</h4>
-        <div class="quantity" id="count-borradores">30 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('borradores', -1)">-</button>
-            <input type="number" id="input-borradores" min="0" value="30" onchange="setCounter('borradores', this.value)">
-            <button class="counter-btn" onclick="updateCounter('borradores', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 90%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="2400">
-        <div class="item-icon">📅</div>
-        <h4>Agendas</h4>
-        <div class="quantity" id="count-agendas">10 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('agendas', -1)">-</button>
-            <input type="number" id="input-agendas" min="0" value="10" onchange="setCounter('agendas', this.value)">
-            <button class="counter-btn" onclick="updateCounter('agendas', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 50%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="2600">
-        <div class="item-icon">📌</div>
-        <h4>Chinches</h4>
-        <div class="quantity" id="count-chinches">60 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('chinches', -1)">-</button>
-            <input type="number" id="input-chinches" min="0" value="60" onchange="setCounter('chinches', this.value)">
-            <button class="counter-btn" onclick="updateCounter('chinches', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 100%"></div>
-        </div>
-    </div>
-
-    <div class="item-card fade-in" data-delay="2800">
-        <div class="item-icon">🖇️</div>
-        <h4>Abrochadoras</h4>
-        <div class="quantity" id="count-abrochadoras">5 unidades</div>
-        <div class="counter-controls">
-            <button class="counter-btn" onclick="updateCounter('abrochadoras', -1)">-</button>
-            <input type="number" id="input-abrochadoras" min="0" value="5" onchange="setCounter('abrochadoras', this.value)">
-            <button class="counter-btn" onclick="updateCounter('abrochadoras', 1)">+</button>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 25%"></div>
-        </div>
-    </div>
-</div>
-
-<!-- Contador total -->
-<div class="total-counter fade-in" data-delay="2000">
-    <h3>📊 Total de Útiles Donados</h3>
-    <div class="total-number" id="total-count">210</div>
-    <p>¡Gracias por tu generosidad!</p>
-</div>
+        <section class="mission-section" id="mision">
+            <div class="mission-container fade-in">
+                <h3 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    Nuestra Misión
+                </h3>
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Nuestra Creencia</h4>
+                        <p>Consideramos que todos los niños merecen acceder a una educación de calidad, independientemente de su situación económica. Por esta razón, nos comprometemos a donar útiles escolares a familias de bajos recursos.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>Nuestro Objetivo</h4>
+                        <p>Eliminar las barreras económicas que impiden el acceso a la educación</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>Nuestra Acción</h4>
+                        <p>Proporcionamos útiles escolares completos a niños que más lo necesitan</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Nuestro Impacto</h4>
+                        <p>Generamos sonrisas y oportunidades para un futuro mejor</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="gallery-section">
-    <h3 class="section-title">🎨 Galería de la Campaña 🎨</h3>
-    <div class="gallery-grid">
-        <div class="gallery-item fade-in" data-delay="0">
-            <div class="drawing-frame">
-                <div class="drawing">
-                    <div class="drawing-content">
-                        <div class="sun">☀️</div>
-                        <div class="house">🏠</div>
-                        <div class="tree">🌳</div>
-                        <div class="flowers">🌸🌼🌺</div>
+        <section class="importance-section">
+            <div class="importance-container fade-in">
+                <h3 class="section-title">
+                    <i class="fas fa-book"></i>
+                    ¿Por Qué es Importante Donar Útiles Escolares?
+                </h3>
+                <div class="importance-content">
+                    <div class="importance-intro">
+                        <p>La educación es un derecho fundamental, pero muchos niños no pueden acceder a ella por falta de recursos básicos. Los útiles escolares son la puerta de entrada al aprendizaje.</p>
+                    </div>
+                    <div class="importance-grid">
+                        <div class="importance-card problem">
+                            <div class="importance-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h4>Realidad Actual</h4>
+                            <p>Muchos niños abandonan la escuela por falta de recursos económicos para comprar útiles escolares básicos.</p>
+                            <span class="card-label">Problema Urgente</span>
+                        </div>
+                        <div class="importance-card right">
+                            <div class="importance-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h4>Derecho Fundamental</h4>
+                            <p>La educación es un derecho humano básico. Ningún niño debería quedarse sin estudiar por no tener cuadernos o lápices.</p>
+                            <span class="card-label">Justicia Social</span>
+                        </div>
+                        <div class="importance-card potential">
+                            <div class="importance-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Potencial Perdido</h4>
+                            <p>Cada niño sin útiles escolares es un futuro científico, doctor, maestro o líder que el mundo podría perder.</p>
+                            <span class="card-label">Futuro en Riesgo</span>
+                        </div>
                     </div>
                 </div>
-                <p class="drawing-caption">Dibujo de María, 8 años</p>
             </div>
-        </div>
-        
-        <div class="gallery-item fade-in" data-delay="200">
-            <div class="drawing-frame">
-                <div class="drawing">
-                    <div class="drawing-content">
-                        <div class="rainbow">🌈</div>
-                        <div class="school">🏫</div>
-                        <div class="children">👧👦👧</div>
-                        <div class="books">📚📖📝</div>
-                    </div>
-                </div>
-                <p class="drawing-caption">Dibujo de Carlos, 7 años</p>
-            </div>
-        </div>
-        
-        <div class="gallery-item fade-in" data-delay="400">
-            <div class="drawing-frame">
-                <div class="drawing">
-                    <div class="drawing-content">
-                        <div class="heart-big">💖</div>
-                        <div class="thank-you-text">¡GRACIAS!</div>
-                        <div class="stars-small">⭐✨⭐</div>
-                    </div>
-                </div>
-                <p class="drawing-caption">Dibujo de Ana, 9 años</p>
-            </div>
-        </div>
-        
-        <div class="gallery-item fade-in" data-delay="600">
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <div class="camera-icon">📸</div>
-                    <p>Foto de la campaña</p>
-                    <small>Niños recibiendo útiles</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="share-section">
-    <div class="share-container fade-in" data-delay="800">
-        <h3>🌐 Comparte Nuestra Campaña</h3>
-        <p>¡Ayúdanos a llegar a más personas!</p>
-        <button class="share-btn" onclick="shareContent()">
-            <span class="share-icon">📤</span>
-            Compartir Enlace
-        </button>
-        <div class="share-message" id="share-message" style="display: none;">
-            ¡Enlace copiado al portapapeles! 📋✨
-        </div>
-    </div>
-</section>
+        <section class="donations-section" id="donaciones">
+            <h3 class="section-title">
+                <i class="fas fa-gift"></i>
+                Útiles Donados
+            </h3>
+            <div class="items-grid" id="donations-grid">
+                  Las tarjetas se generarán dinámicamente con JavaScript 
+            </div>
+
+            <div class="total-counter fade-in" data-delay="2000">
+                <h3>
+                    <i class="fas fa-chart-bar"></i>
+                    Total de Útiles Donados
+                </h3>
+                <div class="total-number" id="total-count">0</div>
+                <p>
+                    <i class="fas fa-heart"></i>
+                    ¡Gracias por tu generosidad!
+                </p>
+            </div>
+        </section>
+
+        <section class="share-section">
+            <div class="share-container fade-in" data-delay="800">
+                <h3>
+                    <i class="fas fa-share-alt"></i>
+                    Comparte Nuestra Campaña
+                </h3>
+                <p>¡Ayúdanos a llegar a más personas!</p>
+                <button class="share-btn" onclick="shareContent()">
+                    <i class="fas fa-share"></i>
+                    Compartir Enlace
+                </button>
+                <div class="share-message" id="share-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    ¡Enlace copiado al portapapeles!
+                </div>
+            </div>
+        </section>
 
         <section class="thank-you-section">
             <div class="thank-you-card fade-in" data-delay="800">
-                <h3>¡Muchas Gracias! 🎉</h3>
+                <h3>
+                    <i class="fas fa-trophy"></i>
+                    ¡Muchas Gracias!
+                </h3>
                 <p>Gracias a todas las personas que han contribuido con estas donaciones.</p>
                 <p class="highlight">¡Tu ayuda hace la diferencia en la vida de muchos niños!</p>
                 <div class="hearts">
-                    <span class="heart">💖</span>
-                    <span class="heart">💖</span>
-                    <span class="heart">💖</span>
+                    <i class="fas fa-heart heart"></i>
+                    <i class="fas fa-heart heart"></i>
+                    <i class="fas fa-heart heart"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="credits-section fade-in" data-delay="1000">
+            <div class="credits-card">
+                <h4>
+                    <i class="fas fa-user-graduate"></i>
+                    Creado por:
+                </h4>
+                <p class="student-name">Estudiantes de 5to Grado</p>
+                <h4>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Con ayuda de:
+                </h4>
+                <p class="teacher-name">Docentes I.E. Eusebio Séptimo Mari</p>
+                <div class="school-year">
+                    <i class="fas fa-calendar-alt"></i>
+                    Año Escolar 2025
                 </div>
             </div>
         </section>
 
-        <section class="credits-section">
-    <div class="credits-card fade-in" data-delay="1000">
-        <h4>👩‍🎓 Creado por:</h4>
-        <p class="student-name">Sofía Martínez - 5to Grado 👧</p>
-        <h4>🧑‍🏫 Con ayuda de:</h4>
-        <p class="teacher-name">Profe Carmen López</p>
-        <div class="school-year">📅 Año Escolar 2025</div>
-    </div>
-</section>
-    </main>
+        <section class="contact-info-section fade-in" id="contacto">
+            <h3 class="section-title">
+                <i class="fas fa-map-marker-alt"></i>
+                Contáctanos
+            </h3>
+            <div class="contact-info-card">
+                <div class="contact-details">
+                    <h4>Institución Educativa Eusebio Séptimo Mari</h4>
+                    <p><i class="fas fa-map-marked-alt"></i> <strong>Dirección:</strong> Calle 13 # 8-119. Riohacha, La Guajira.</p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 605 7318210</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> Educatrueque4@gmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +57 305 3501972</p>
+                    <p><i class="fas fa-globe"></i> <strong>Coordenadas:</strong> 11°32'44.4"N 72°54'34.9"W</p>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6000000000004!2d-72.9122579!3d11.545657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDMyJzQ0LjQiTiA3MsKwNTQnMzQuOSJX!5e0!3m2!1ses!2sco!4v1678901234567!5m2!1ses!2sco"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
 
-    <footer class="footer">
-        <p>Presentación escolar - Donaciones 2025 🌟</p>
+        <p class="footer-text">
+            <i class="fas fa-graduation-cap"></i>
+            I.E. Eusebio Séptimo Mari - Donaciones Escolares 2025
+            <i class="fas fa-star"></i>
+        </p>
     </footer>
 
     <script src="script.js"></script>
